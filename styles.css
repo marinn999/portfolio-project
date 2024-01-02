@@ -20,6 +20,7 @@ img {
     display: flex;
     flex-direction: row;
     margin: 0;
+    cursor: pointer;
 }
 .page-navigation-list-item {
     padding: 32px 24px;
@@ -719,7 +720,7 @@ margin: 0;
 .form-section-right {
 
 }
-.form-field-label {
+.form-section-label {
         display: block;
         color: var(--White, #FFF);
 
@@ -733,11 +734,102 @@ line-height: 150%; /* 24px */
         margin-bottom: 8px;
     }
 
-.review-form-input {
-
+.form-section-input {
+    width: 526px;
+    height: 50px;
+    flex-shrink: 0;
+    background: var(--Level-1, #181823);
+    margin-bottom: 40px;
 }
-.review-form-comment {
+.form-section-comment {
+    width: 526px;
+height: 100px;
+flex-shrink: 0;
+    background: var(--Level-1, #181823);
+    resize: none;
+    border: none;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.form-section-btn {
+    display: block;
+    width: 526px;
+    padding: 24px 32px;
+    flex-direction: column;
+    align-items: center;
+    background: var(--Purple, #5221E6);
+    border: none;
+    color: var(--White, #FFF);
 
+/* Button_18px */
+font-family: Sen;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */
+text-transform: uppercase;
 }
 
 /* =============================  /Section 10 LGStarted ========================== */
+
+/* =============================  FOOTER ========================== */
+.footer {
+    background-color: var(--Level-1, #181823);
+    padding: 80px 72px;
+    display: flex;
+}
+.footer-left {
+display: flex;
+flex-direction: column;
+}
+.footer-logo-nav {
+
+}
+.footer-logotype {
+    width: 130.716px;
+    height: 40px;
+    flex-shrink: 0;
+    fill: #FFF;
+    margin-bottom: 32px;
+}
+.footer-icons-div {
+    display: flex;
+gap: 16px;
+}
+.footer-icon { 
+
+}
+.footer-text {
+    color: var(--Light-Grey, #8491A0);
+margin: 0;
+padding-top: 142px;
+    /* Paragraph_16px */
+    font-family: Sen;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+.footer-right {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+width: 196px;
+height: 192px;
+padding-left: 344px;
+
+
+}
+.footer-link {
+    color: var(--White, #FFF);
+    width: 196px;
+    height: 48px;
+    /* Paragraph_16px */
+    font-family: Sen;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    text-decoration: none;
+}
+/* =============================  /FOOTER ========================== */
