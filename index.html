@@ -33,6 +33,14 @@
                 <li class="page-navigation-list-item">Contact</li>
             </ul>
         </nav>
+        <button class="header-btn">
+            <svg class="open-menu-btn"
+            width="24"
+            height="24"
+            aria-label="open menu button">
+                <use href="./symbol-defs.svg#icon-Group-65"></use>
+            </svg>
+        </button>
 
     </div>
 
@@ -42,8 +50,21 @@
     <!-- ============================== Section 1 ============================== -->
 <section class="hero">
     
-        <img src="./img/desktop img/2/2.jpg" 
-             alt="designer photo"></img>
+        <img class="hero-mobile-img"
+             src="./img/mobile img/Rectangle 37.jpg" 
+                alt="designer photo"
+                width="360"
+                height="288"></img>
+        <img class="hero-tablet-img"
+             src="./img/tablet img/1/Rectangle 37.jpg" 
+                alt="designer photo"
+                width="384"
+                height="650"></img>
+        <img class="hero-desktop-img"
+             src="./img/desktop img/2/2.jpg" 
+                alt="designer photo"
+                width="750"
+                height="650"></img>
              <div class="hero-div">
         <h1 class="hero-title">I’m Robin Williams. A Product Designer <span class="hero-title-span">based in Italy.</span></h1>
         <p class="hero-text">I’m probably the most passionate designer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.</p>
@@ -84,17 +105,31 @@
 <!-- ============================== Section 3 PHILOSOPHY ============================== -->
 <section class="philosophy">
     <div class="philosophy-text-div">
-        <h2 class="philosophy-title">Philosophy & values</h2>
-            <p class="philosophy-text">
-                I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality.
-            </p>
-            <a class="philosophy-link"
+        <div class="philosophy-text-without-link">
+            <h2 class="philosophy-title">Philosophy & values</h2>
+                <p class="philosophy-text">
+                    I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality.
+                </p>
+        </div>
+        <a class="philosophy-link"
             href="#skillset" 
-            width="264" 
-            height="260"
             >More about me</a>
     </div>
-    <img src="./img/desktop img/3/3.jpg" alt="glass ball in hand">
+    <img class="philosophy-mobile-img"
+        src="./img/mobile img/Rectangle 39.jpg" 
+        alt="glass ball in hand"
+        width="360"
+        height="450">
+    <img class="philosophy-tablet-img"
+        src="./img/tablet img/2/Rectangle 39.jpg" 
+        alt="glass ball in hand"
+        width="384"
+        height="600">
+    <img class="philosophy-desktop-img"
+        src="./img/desktop img/3/3.jpg" 
+        alt="glass ball in hand"
+        width="720"
+        height="600">
 </section>
 <!-- ============================== / Section 3 PHILOSOPHY ============================== -->
 
@@ -181,6 +216,20 @@ id="skillset">
                 <use href="./symbol-defs.svg#icon-Fresh"></use>
             </svg>
         </li>
+        <li class="icons-section-list-item">
+            <svg class="icons-section-list-item-icon"
+            width="154"
+            height="25">
+                <use href="./symbol-defs.svg#icon-PlaceforMom"></use>
+            </svg>
+        </li>
+        <li class="icons-section-list-item">
+            <svg class="icons-section-list-item-icon"
+            width="180"
+            height="140">
+                <use href="./symbol-defs.svg#icon-Group-79"></use>
+            </svg>
+        </li>
     </ul>
 </section>
 
@@ -193,10 +242,23 @@ id="skillset">
         <p class="projects-section-description">Work that I’ve done for the past 8 years</p>
         <ul class="projects-section-list">
             <li class="projects-section-list-item">
-                <img src="./img/desktop img/4/Rectangle 41.jpg" 
-                alt="laptop on the table"
-                width="636"
-                height="620">
+                <img class="project-section-desktop-img"
+                    src="./img/desktop img/4/Rectangle 41.jpg" 
+                    alt="laptop on the table"
+                    width="636"
+                    height="620">
+                </img>
+                <img class="project-section-tablet-img"
+                    src="./img/tablet img/3/Rectangle 41.jpg" 
+                    alt="laptop on the table"
+                    width="688"
+                    height="620">
+                </img>
+                <img class="project-section-mobile-img"
+                    src="./img/mobile img/1.jpg" 
+                    alt="laptop on the table"
+                    width="320"
+                    height="400">
                 </img>
                 <div class="projects-section-list-item-description">
                 <h3 class="projects-section-list-item-title">Restaurant Website Design</h3>
@@ -204,8 +266,23 @@ id="skillset">
             </div>
             </li>
             <li class="projects-section-list-item">
-                <img src="./img/desktop img/6/Rectangle 41.jpg" alt="graphics on the phone screen">
+                <img class="project-section-desktop-img"
+                    src="./img/desktop img/5/Rectangle 41.jpg" 
+                    alt="graphics on the phone screen"
+                    width="636"
+                    height="620">
                 </img>
+                <img class="project-section-tablet-img"
+                    src="./img/tablet img/4/Rectangle 41.jpg" 
+                    alt="graphics on the phone screen"
+                    width="688"
+                    height="620">
+                </img>
+                <img class="project-section-mobile-img"
+                    src="./img/mobile img/2.jpg" 
+                    alt="graphics on the phone screen"
+                    width="320"
+                    height="400">
                 <div class="projects-section-list-item-description">
                 <h3 class="projects-section-list-item-title">Restaurant Website Design</h3>
                 <p class="projects-section-list-item-text">I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.</p>
@@ -216,16 +293,46 @@ id="skillset">
     <div class="right-projects-section">
         <ul class="projects-section-list">
             <li class="projects-section-list-item">
-                <img src="./img/desktop img/5/Rectangle 41.jpg" alt="coin view application start page">
+                <img class="project-section-desktop-img"
+                    src="./img/desktop img/6/Rectangle 41.jpg" 
+                    alt="coin view application start page"
+                    width="636"
+                    height="620">
                 </img>
+                <img class="project-section-tablet-img"
+                    src="./img/tablet img/5/Rectangle 41.jpg" 
+                    alt="coin view application start page"
+                    width="688"
+                    height="620">
+                </img>
+                <img class="project-section-mobile-img"
+                    src="./img/mobile img/3.png" 
+                    alt="coin view application start page"
+                    width="320"
+                    height="400">
                 <div class="projects-section-list-item-description">
                 <h3 class="projects-section-list-item-title">Restaurant Website Design</h3>
                 <p class="projects-section-list-item-text">I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.</p>
             </div>
             </li>
             <li class="projects-section-list-item">
-                <img src="./img/desktop img/7/Rectangle 41.jpg" alt="website animation">
+                <img class="project-section-desktop-img"
+                    src="./img/desktop img/7/Rectangle 41.jpg" 
+                    alt="website animation"
+                    width="636"
+                    height="620">
                 </img>
+                <img class="project-section-tablet-img"
+                    src="./img/tablet img/6/Rectangle 41.jpg" 
+                    alt="website animation"
+                    width="688"
+                    height="620">
+                </img>
+                <img class="project-section-mobile-img"
+                    src="./img/mobile img/4.jpg" 
+                    alt="website animation"
+                    width="320"
+                    height="400">
                 <div class="projects-section-list-item-description">
                 <h3 class="projects-section-list-item-title">Restaurant Website Design</h3>
                 <p class="projects-section-list-item-text">I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one.</p>  
@@ -247,11 +354,23 @@ id="skillset">
     <p class="insta-section-text">If you area a person who enjoys photography, then I highly recommend that you check out my Instagram. I’m an avid traveller and I capture the best moments that I would love to cherish with the world</p>
     <a class="insta-section-link">Follow me on IG</a>
 </div>
-    <img src="./img/desktop img/8/Rectangle 39.jpg" 
+    <img class="insta-section-desktop-img"
+    src="./img/desktop img/8/Rectangle 39.jpg" 
     alt="plane"
     width="720"
-    height="600"
-    >
+    height="600">
+</img>
+<img class="insta-section-tablet-img"
+    src="./img/tablet img/7/Rectangle 39.jpg" 
+    alt="plane"
+    width="384"
+    height="600">
+</img>
+<img class="insta-section-mobile-img"
+    src="./img/tablet img/7/Rectangle 39.jpg" 
+    alt="plane"
+    width="360"
+    height="450">
 </section>
 
 <!-- ==============================  / Section 6 Insta ============================== -->
@@ -268,11 +387,24 @@ id="skillset">
             >
         <use href="./symbol-defs.svg#icon-Group-86"></use>
     </svg>
-            <img class="dribble-img"
-            src="./img/desktop img/9/Rectangle 42.jpg" alt="laptop menu"
-          
-width="1076";
-height="640">
+            <img class="dribble-section-desktop-img"
+                src="./img/desktop img/9/Rectangle 42.jpg" 
+                alt="laptop menu"
+                width="1076";
+                height="640">
+            </img>
+            <img class="dribble-section-tablet-img"
+                src="./img/tablet img/8/Rectangle 42.jpg" 
+                alt="laptop menu"
+                width="688"
+                height="480">
+            </img>
+            <img class="dribble-section-mobile-img"
+                src="./img/mobile img/Rectangle 42.png" 
+                alt="laptop menu"
+                width="320"
+                height="480">
+            </img>
         </div>
 </section>
 
@@ -289,10 +421,16 @@ height="640">
     <div class="reviews-section-right">
         <ul class="reviews-section-list">
             <li class="reviews-section-list-item">
-                <img src="./img/desktop img/10/Rectangle 41.jpg" alt=""
+                <img class="reviews-section-desktop-img"
+                src="./img/desktop img/10/Rectangle 41.jpg" 
                 width="636"
-                height="360"
-                >
+                height="360">
+            </img>
+            <img class="reviews-section-tablet-img"
+                src="./img/tablet img/9/Rectangle 41.jpg" 
+                width="332"
+                height="360">
+            </img>
                 <div class="reviews-section-list-item-text-div">
                 <p class="reviews-section-list-item-text">‘’Robin is one of the best designers I have worked with in my entire life. He is a designer who is very capable of taking up complex projects and delivers impeccable design.’’</p>
                 <p class="reviews-section-list-item-text-who">Richard Owens</p>
@@ -300,9 +438,16 @@ height="640">
             </div>
             </li>
             <li class="reviews-section-list-item">
-                <img src="./img/desktop img/11/Rectangle 41.jpg" alt=""
+                <img class="reviews-section-desktop-img"
+                src="./img/desktop img/11/Rectangle 41.jpg"
                 width="636"
                 height="360">
+            </img>
+            <img class="reviews-section-tablet-img"
+                src="./img/tablet img/10/Rectangle 41.jpg" 
+                width="332"
+                height="360">
+            </img>
                 <div class="reviews-section-list-item-text-div">
                 <p class="reviews-section-list-item-text">‘’I think Robin has an incredible gift. It has been an absolute pleasure to work with a designer of this caliber.’’</p>
                 <p class="reviews-section-list-item-text-who">Emily Parker</p>
@@ -310,9 +455,16 @@ height="640">
             </div>
             </li>
             <li class="reviews-section-list-item">
-                <img src="./img/desktop img/12/Rectangle 41.jpg" alt=""
+                <img class="reviews-section-desktop-img"
+                src="./img/desktop img/12/Rectangle 41.jpg"
                 width="636"
                 height="360">
+            </img>
+            <img class="reviews-section-tablet-img"
+                src="./img/tablet img/11/Rectangle 41.jpg" 
+                width="332"
+                height="360">
+            </img>
                 <div class="reviews-section-list-item-text-div">
                 <p class="reviews-section-list-item-text">‘’All I can say that, Robin is a phenomenal designer. The wavelength at which he thinks is astoundaing. I love the focus, passion and attention to detial in the design.’’</p>
                 <p class="reviews-section-list-item-text-who">Vincent  Rudd</p>
@@ -394,38 +546,35 @@ required>
 
 <!-- ==============================  FOOTER ============================== -->
 <footer class="footer">
+    <div class="both-sides-footer">
     <div class="footer-left">
+        <a class="footer-logo-nav" href="./index.html">
+            <svg class="footer-logotype"
+                width="78.429px"
+                height="24px"
+                aria-label="page logotype">
+                <use href="./symbol-defs.svg#icon-Vector"></use>
+            </svg>
+        </a>
+        <div class="footer-icons-div">
+            <svg class="footer-icon"
+                width="24"
+                height="24">
+                <use href="./symbol-defs.svg#icon-Twitter"></use>
+            </svg>
+            <svg class="footer-icon"
+                width="24"
+                height="24">
+                <use href="./symbol-defs.svg#icon-Dribbble"></use>
+            </svg>
+            <svg class="footer-icon"
+                width="24"
+                height="24">
+                <use href="./symbol-defs.svg#icon-LinkedIn"></use>
+            </svg>
+        </div>
 
-    
-<a class="footer-logo-nav" href="./index.html">
-    
-    <svg class="footer-logotype"
-    width="78.429px"
-    height="24px"
-    aria-label="page logotype">
-   <use href="./symbol-defs.svg#icon-Vector"></use>
-</svg>
-</a>
-<div class="footer-icons-div">
-<svg class="footer-icon"
-width="24"
-height="24"
->
-    <use href="./symbol-defs.svg#icon-Twitter"></use>
-</svg>
-<svg class="footer-icon"
-width="24"
-height="24">
-    <use href="./symbol-defs.svg#icon-Dribbble"></use>
-</svg>
-<svg class="footer-icon"
-width="24"
-height="24">
-    <use href="./symbol-defs.svg#icon-LinkedIn"></use>
-</svg>
-</div>
-<p class="footer-text">Not Copyright 2020 • Robin Williams. Webflow cloneable</p>
-</div>
+    </div>
 <div class="footer-right">
     <a href="" class="footer-link">Home</a>
     <a href="" class="footer-link">About</a>
@@ -435,6 +584,8 @@ height="24">
     <a href="" class="footer-link">Blog</a>
     <a href="" class="footer-link">Reading List</a>
 </div>
+</div>
+<p class="footer-text">Not Copyright 2020 • Robin Williams. Webflow cloneable</p>
 </footer>
 
 <!-- ==============================  / FOOTER ============================== -->

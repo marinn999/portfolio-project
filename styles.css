@@ -1,20 +1,77 @@
-.header, .hero{
-    background-color: #000000;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../img/desktop/1/1.jpg);
-    background-size: 900px;
-    background-repeat: no-repeat;
-    background-position: right;
-    width: 1440px;
-}
+/* ======================= COMMON STYLES ======================= */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul,
+ol {
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+li {
+    list-style-type: none;
+}
 img {
     display: block;
+}
+a {
+    text-decoration: none;
+    font-style: normal;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+button {
+    cursor: pointer;
+}
+/* ========================== /COMMON STYLES =========================== */
+/* ========================== MOBILE HEADER STYLES========================== */
+.header, .hero{
+    background-color: #000000;
 }
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 72px;
+    padding: 24px 20px;
+}
+.page-navigation-list {
+    display: none;
+}
+.header-btn {
+    display: flex;
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+/* ========================== /MOBILE HEADER STYLES========================== */
+
+/* ========================== TABLET HEADER STYLES========================== */
+@media screen and (min-width: 768px) {
+.header-container {
+    padding: 0 40px;
+}
+.header-btn {
+    display: none;
 }
 .page-navigation-list {
     display: flex;
@@ -31,25 +88,47 @@ img {
     font-weight: 400;
     line-height: 150%; 
     list-style-type: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.page-navigation-list-item:hover, .page-navigation-list-item:focus {
+    background-color: var(--Purple, #5221E6);
+}
+}
+/* ========================== /TABLET HEADER STYLES========================== */
 
-/* =============HERO=============== */
-.hero {
-    padding: 80px 40px 84px 0;
-    display: flex;
+/* ========================== DESKTOP HEADER STYLES========================== */
+
+@media screen and (min-width: 1158px) {
+    .header, .hero{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../img/desktop/1/1.jpg);
+        background-size: 900px;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    
+    .header-container {
+        padding: 0 72px;
+    }
+}
+/* ========================== /DESKTOP HEADER STYLES========================== */
+
+/* ==========================  HERO STYLES ======================== */
+
+/* ========================== MOBILE HERO STYLES======================== */
+.hero-tablet-img, .hero-desktop-img {
+    display: none;
 }
 .hero-div {
-    position: absolute;
-    margin-left: 662px;
-    margin-top: 141px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 48px 20px;
 }
 .hero-title { 
-    display: block;
-    margin: 0;
-    width: 738px;
+    width: 320px;
     color: var(--White, #FFF);
     font-family: Sen;
-    font-size: 78px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -58,10 +137,7 @@ img {
     color: rgba(255, 255, 255, 0.50); 
 }
 .hero-text {
-    display: block;
-    margin: 0;
-    padding-top: 32px;
-    width: 738px;
+    width: 320px;
     color: var(--White, #FFF);
     font-family: Sen;
     font-size: 18px;
@@ -69,17 +145,69 @@ img {
     font-weight: 400;
     line-height: 150%;
 }
+/* ========================== /MOBILE HERO STYLES======================== */
 
-/* ============= / HERO=============== */
+/* ========================== TABLET HERO STYLES======================== */
+@media screen and (min-width: 768px) {
+.hero-mobile-img, .hero-desktop-img {
+    display: none;
+}
+.hero-tablet-img {
+    display: block;
+}
+.hero {
+    padding: 80px 40px 84px 0;
+    display: flex;
+}
+.hero-div {
+    position: absolute;
+    margin-left: 320px;
+    margin-top: 85px;
+    gap: 32px;
+    padding: 0;
+}
+.hero-title { 
+    width: 408px;
+    font-size: 56px;
+}
+.hero-text {
+    width: 408px;
+}
+}
+/* ========================== /TABLET HERO STYLES======================== */
+
+/* ========================== DESKTOP HERO STYLES======================== */
+@media screen and (min-width: 1158px) {
+    .hero-mobile-img, .hero-tablet-img {
+        display: none;
+    }
+    .hero-desktop-img {
+        display: block;
+    }
+    .hero-div {
+        margin-left: 662px;
+        margin-top: 141px;
+    }
+    .hero-title { 
+        width: 738px;
+        font-size: 78px;
+    }
+    .hero-text {
+        width: 738px;
+    }
+}
+/* ========================== /DESKTOP HERO STYLES======================== */
+
+/* ========================== /HERO STYLES ======================== */
 
 /* ============= Section 2 - EXPERIENCE =============== */
+
+/* ============= EXPERIENCE MOBILE STYLES =============== */
 .experience-section {
     background-color: #000000;
-    width: 1440px;
-    padding: 120px 72px;
+    padding: 48px 20px;
 }
 .work-experience {
-    margin: 0;
     color: var(--Light-Grey, #8491A0);
     font-family: Sen;
     font-size: 16px;
@@ -89,25 +217,23 @@ img {
     text-transform: uppercase;
 }
 .companies-experience {
-    width: 690px;
+    width: 320px;
     margin-top: 8px;
     margin-bottom: 40px;
     color: var(--White, #FFF);
     font-family: Sen;
-    font-size: 55px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 .companies-experience-list {
-   margin: 0;
-   padding: 0; 
-   display: flex;
-   gap: 72px;
-}
-.company-number {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+ }
+ .company-number {
     width: 126px;
-    margin: 0;
     color: #8491A0;
     font-family: Sen;
     font-size: 117px;
@@ -118,13 +244,14 @@ img {
 .company-name {
     margin-top: 0;
     margin-left: 0;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
     color: var(--White, #FFF);
     font-family: Sen;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;  
+    width: 320px;
 }
 .green {
     color: var(--Green_Accent, #3CC74E);
@@ -136,72 +263,169 @@ img {
     color: var(--Pink_Accent, #E95D90);
 }
 .company-description {
-    width: 368px;
+    width: 320px;
     color: var(--Light-Grey, #8491A0);
-    margin: 0;
     font-family: Sen;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
 }
+/* ============= /EXPERIENCE MOBILE STYLES =============== */
+
+/* ============= EXPERIENCE TABLET STYLES =============== */
+@media screen and (min-width: 768px) {
+    .experience-section {
+        padding: 80px 40px;
+    }
+    .companies-experience {
+        width: 688px;
+        font-size: 55px;
+    }
+    .companies-experience-list {
+        flex-direction: row;
+        gap: 40px;
+    }
+    .company-name {
+        width: 197px;
+        margin-bottom: 24px;
+    }
+    .company-description {
+        width: 197px;
+    }
+}
+/* ============= /EXPERIENCE TABLET STYLES =============== */
+
+/* ============= EXPERIENCE DESKTOP STYLES =============== */
+@media screen and (min-width: 1158px) {
+    .experience-section {
+        padding: 120px 72px;
+    }
+    .companies-experience {
+        width: 690px;
+    }
+    .companies-experience-list {
+       gap: 72px;
+    }
+    .company-name {
+        margin-bottom: 22px;
+        width: 368px;
+    }
+    .company-description {
+        width: 368px;
+    }
+}
+/* ============= /EXPERIENCE DESKTOP STYLES =============== */
 /* ============= / Section 2 - EXPERIENCE =============== */
 
 /* ===================== Section 3 PHILOSOPHY ====================== */
-.philosophy {
-    width: 1440px;
-    display: flex;
 
+/* ============= PHILOSOPHY MOBILE STYLES =============== */
+.philosophy-tablet-img, 
+.philosophy-desktop-img {
+    display: none;
+}
+.philosophy-mobile-img {
+width: 100%;
+}
+.philosophy {
+    display: flex;
+flex-direction: column;
 }
 .philosophy-text-div {
-    display: flex;
-    flex-direction: column;
-   align-content: space-between;
-    padding: 120px 72px;
+    padding: 48px 20px;
 background-color: #FFF3E4;
-}
-.philosophy-title {
-    margin: 0;
-    color: var(--Level-1, #181823);
+height: 450px;
 
-/* Heading - 55px */
-font-family: Sen;
-font-size: 55px;
-font-style: normal;
+/* display: flex;
+flex-direction: column;
+align-items: space-between; */
+}
+/* .philosophy-text-div:last-child {
+    align-items: flex-end;
+    justify-content: end;
+} */
+
+.philosophy-title {
+    color: var(--Level-1, #181823);
+    font-family: Sen;
+font-size: 32px;
 font-weight: 700;
 line-height: normal;
 }
 .philosophy-text {
- display: block;
-    width: 576px;
-    margin: 0;
-    padding-top: 24px;
-    color: var(--Dark-grey, #5B6876);
-
-/* Pargraph_18px */
-font-family: Sen;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 27px */
-}
-.philosophy-link {
-    display: flex;
+       width: 320px;
+       padding-top: 24px;
+       color: var(--Dark-grey, #5B6876);
+   font-family: Sen;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 150%; 
+   }
+   .philosophy-link {
+    
     color: var(--Level-1, #181823);
-
-/* Paragraph_16px */
-font-family: Sen;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-text-decoration: underline;
-text-underline-offset: 8px;
-text-decoration-thickness: 1px;
-text-decoration-color: #8491A0;
-
+    font-family: Sen;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; 
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #8491A0;
 }
-/* .philosophy-link::after {
+/* ============= /PHILOSOPHY MOBILE STYLES =============== */
+
+/* ============= PHILOSOPHY TABLET STYLES =============== */
+@media screen and (min-width: 768px) {
+    .philosophy-mobile-img, 
+    .philosophy-desktop-img {
+        display: none;
+    }
+    .philosophy-tablet-img {
+        display: block;
+        width: 100%;
+    }
+    .philosophy {
+        display: flex;
+    flex-direction: row;
+    }
+    .philosophy-text-div {
+        padding: 80px 40px;
+    height: 600px;
+    }
+    .philosophy-title {
+    font-size: 55px;
+    width: 304px;
+    }
+    .philosophy-text {
+           width: 304px;
+       }
+}
+/* ============= /PHILOSOPHY TABLET STYLES =============== */
+
+/* ============= PHILOSOPHY DESKTOP STYLES =============== */
+@media screen and (min-width: 1158px) {
+    .philosophy-mobile-img, 
+    .philosophy-tablet-img {
+        display: none;
+    }
+    .philosophy-desktop-img {
+        display: block;
+        width: 100%;
+    }
+    .philosophy-text-div {
+        padding: 120px 72px;
+        width: 100%;
+    }
+    .philosophy-title {
+    font-size: 55px;
+    width: 100%;
+    }
+    .philosophy-text {
+           width: 576px;
+       }
+       /* .philosophy-link::after {
     content: '';
     left: 0;
     bottom: 10px;
@@ -209,343 +433,563 @@ text-decoration-color: #8491A0;
     width: 116px;
     height: 1px;
 } */
+}
+/* ============= /PHILOSOPHY DESKTOP STYLES =============== */
 
-/* ===================== / Section 3 PHILOSOPHY ====================== */
+/* ==========================  Section 4 SKILLSET ======================== */
 
-/* 
-=============================  Section 4 SKILLSET ========================== */
+/* ==========================  SKILLSET MOBILE STYLES ======================== */
+
 .skillset-section {
-padding: 120px 72px;
-width: 1440px;
-height: 664px;
-background-color: #000000;
-display: flex;
-justify-content: space-between;
-gap: 48px;
-}
-.skillset-title {
-    color: #FFF;
-font-family: Sen;
+    background-color: #000000;
+    padding: 78px 20px 64px 20px;
+    }
+    .skillset-div-left {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .skillset-title {
+        color: #FFF;
+    font-family: Sen;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    }
+    .skillset-text {
+        color: var(--Light-Grey, #8491A0);
+    font-family: Sen;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%; 
+    width: 320px;
+    }
+    .skillset-list {
+        padding-top: 69px;
+       display: flex;
+       flex-direction: column;
+        gap: 48px;
+    }
+    .skillset-list-item-title {
+        color: var(--White, #FFF);
+    padding-top: 24px;
+    padding-bottom: 12px;
+    font-family: Sen;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%; /* 36px */
+    }
+    .skillset-list-item-text {
+        color: var(--Light-Grey, #8491A0);
+        width: 320px;
+    font-family: Sen;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    }
+/* ==========================  /SKILLSET MOBILE STYLES ======================== */
+
+
+/* ==========================  SKILLSET TABLET STYLES ======================== */
+@media screen and (min-width: 768px) {
+.skillset-section {
+    padding: 80px 40px;
+    }
+    .skillset-div-left {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .skillset-title {
 font-size: 55px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin: 0;
+    }
+    .skillset-text {
+    width: 688px;
+    }
+    .skillset-list {
+        padding-top: 48px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 48px;
+        column-gap: 72px;
+    }
+    .skillset-list-item-title {
+        color: var(--White, #FFF);
+    padding-top: 24px;
+    padding-bottom: 12px;
+    font-family: Sen;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%; /* 36px */
+    }
+    .skillset-list-item-text {
+        color: var(--Light-Grey, #8491A0);
+        width: 284px;
+    font-family: Sen;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    }
 }
-.skillset-text {
-    color: var(--Light-Grey, #8491A0);
-margin: 0;
-padding-top: 24px;
-width: 368px;
-/* Pargraph_18px */
-font-family: Sen;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 27px */
-}
+/* ==========================  /SKILLSET TABLET STYLES ======================== */
 
-
-.skillset-list {
+/* ==========================  SKILLSET DESKTOP STYLES ======================== */
+@media screen and (min-width: 1158px) {
+.skillset-section {
+    padding: 120px 72px;
+    height: 664px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    row-gap: 48px;
-    column-gap: 24px;
+    justify-content: space-between;
+    gap: 48px;
+        }
+    .skillset-text {
+     width: 368px;
+    }
+    .skillset-list {
+          padding: 0;
+        }
+    .skillset-list-item-text {
+            width: 368px;
+        }
 }
+/* ==========================  /SKILLSET DESKTOP STYLES ======================== */
 
-.skillset-list-item-title {
-    color: var(--White, #FFF);
-margin: 0;
-padding-top: 24px;
-padding-bottom: 12px;
-/* Heading_24px */
-font-family: Sen;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%; /* 36px */
-}
-.skillset-list-item-text {
-    color: var(--Light-Grey, #8491A0);
-    width: 368px;
-    margin: 0;
-/* Paragraph - 16px */
-font-family: Sen;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-}
-/* 
-=============================  /Section 4 SKILLSET ========================== */
 
-/* 
-=============================  Section 5 ICONS ========================== */
+/* ==========================  Section 5 ICONS ========================== */
+
+/* ==========================  ICONS MOBILE STYLES ========================== */
 .icons-section {
     background-color: #000000;
 }
 .icons-section-list {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 .icons-section-list-item {
-    width: 340px;
-    height: 140px;
+    width: 180px;
+height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid var(--Level-1, #181823);
 }
+/* ==========================  /ICONS MOBILE STYLES ========================== */
 
-/* 
-=============================  /Section 5 ICONS ========================== */
+/* ==========================  ICONS TABLET STYLES ========================== */
+@media screen and (min-width: 768px) {
+    .icons-section-list-item {
+        width: 384px;
+    }
+}
+/* ==========================  /ICONS TABLET STYLES ========================== */
 
-/* 
-=============================  Section 6 PROJECTS ========================== */
+/* ==========================  ICONS DESKTOP STYLES ========================== */
+@media screen and (min-width: 1158px) { 
+    .icons-section {
+        background-color: #000000;
+        overflow-x: auto;
+    }
+    .icons-section-list {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+      
+    }
+    .icons-section-list-item {
+        flex-shrink: 0;
+width: 340px;
+    }
+}
+/* ==========================  /ICONS DESKTOP STYLES ========================== */
+
+
+/* ============================  Section 6 PROJECTS ========================== */
+
+
+/* ============================  PROJECTS MOBILE STYLES ========================== */
+.project-section-tablet-img,
+.project-section-desktop-img {
+    display: none;
+}
+.project-section-mobile-img {
+    display: block;
+    object-fit: cover;
+}
 .projects-section {
     background-color: #000000;
-    margin: 0;
-    padding: 120px 72px;
+    padding: 64px 20px 70px 20px;
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 48px;
 } 
 .projects-section-title {
-    margin: 0;
     color: var(--Light-Grey, #8491A0);
-
-/* Overline_16px */
-font-family: Sen;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%; /* 24px */
-text-transform: uppercase;
+    font-family: Sen;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+    text-transform: uppercase;
 }
 .projects-section-description {
     color: var(--White, #FFF);
-    width: 572px;
-/* Heading - 55px */
-font-family: Sen;
-font-size: 55px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-top: 8px;
-margin-bottom: 80px;
+    width: 320px;
+    font-family: Sen;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 8px;
+    margin-bottom: 80px;
 }
 .projects-section-list {
     display: flex;
     flex-direction: column;
- gap: 24px;
-padding: 0;
-margin: 0;
+    gap: 48px;
 }
 .projects-section-list-item {
     background: var(--Level-1, #181823);
-   
-width: 636px;
+    width: 320px;
 }
 .projects-section-list-item-description {
+    display: flex;
     padding: 40px 32px;
+    flex-direction: column;
+    gap: 13px;
 }
 .projects-section-list-item-title {
     color: var(--White, #FFF);
-margin: 0;
-padding-bottom: 13px;
-
-    /* Heading_24px */
     font-family: Sen;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 150%; /* 36px */ 
+    line-height: 150%; 
 }
 .projects-section-list-item-text {
-    margin: 0;
     color: var(--Light-Grey, #8491A0);
+    font-family: Sen;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%; 
+}
+.projects-section-btn {
+    display: none;
+}
+/* ============================  /PROJECTS MOBILE STYLES ========================== */
+
+
+/* ============================  PROJECTS TABLET STYLES ========================== */
+@media screen and (min-width: 768px) {
+.project-section-mobile-img,
+.project-section-desktop-img {
+    display: none;
+}
+.project-section-tablet-img {
+    display: block;
+}
+.projects-section {
+    padding: 80px 40px;
+} 
+.projects-section-description {
+    width: 688px;
+    font-size: 55px;
+}
+.projects-section-list-item {
+    width: 688px;
+}
+}
+/* ============================  /PROJECTS TABLET STYLES ========================== */
+
+
+/* ============================  PROJECTS DESKTOP STYLES ========================== */
+@media screen and (min-width: 1158px) { 
+.project-section-mobile-img,
+.project-section-tablet-img {
+    display: none;
+}
+.project-section-desktop-img {
+    display: block;
+}
+.projects-section {
+    padding: 120px 72px;
+   flex-direction: row;
+    gap: 24px;
+} 
+.projects-section-description {
     width: 572px;
-/* Pargraph_18px */
-font-family: Sen;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 27px */
+}
+.projects-section-list {
+    gap: 24px;
+}
+.projects-section-list-item {
+    width: 636px;
 }
 .projects-section-btn {
     min-width: 247px;
     height: 75px;
     display: flex;
     color: var(--White, #FFF);
-background-color: transparent;
-/* Button_18px */
-font-family: Sen;
-font-size: 18px;
-font-weight: 700;
-line-height: 150%;
-text-transform: uppercase;
-
-padding: 24px 32px;
-align-items: center;
-border: 1px solid var(--Purple, #5221E6);
-margin-top: 91px;
-
-                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    font-family: Sen;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+    padding: 24px 32px;
+    align-items: center;
+    border: 1px solid var(--Purple, #5221E6);
+    margin-top: 91px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 .right-projects-section {
- margin-top: 0;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
 }
-/* =============================  Section 5 PROJECTS ========================== */
+/* ============================  /PROJECTS DESKTOP STYLES ========================== */
 
 /* =============================  Section 6 Insta ========================== */
-.insta-section {
-    display: flex;
-    flex-direction: row;
+
+/* =============================  Insta MOBILE STYLES ========================== */
+.insta-section-tablet-img,
+.insta-section-desktop-img {
+    display: none;
+}
+.insta-section-mobile-img {
+    width: 100%;
 }
 .insta-section-left {
     background: var(--Violet-Accent, #FBE4FF);
-    padding: 120px 72px;
+    padding: 48px 20px;
 }
 .insta-section-title {
     color: var(--Level-1, #181823);
-    margin: 0;
-
-/* Heading - 55px */
-font-family: Sen;
-font-size: 55px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    font-family: Sen;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 .insta-section-text {
     color: var(--Dark-grey, #5B6876);
-    margin-top: 24px;
-    margin-bottom: 134px;
-    width: 576px;
-/* Pargraph_18px */
-font-family: Sen;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 27px */
+    margin-top: 16px;
+
+    margin-bottom: 125px;
+
+    width: 320px;
+    font-family: Sen;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
 }
 .insta-section-link {
     color: var(--Level-1, #181823);
-
-/* Paragraph_16px */
-font-family: Sen;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
+    font-family: Sen;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #8491A0;
 }
-/* =============================  /Section 6 Insta ========================== */
+/* =============================  /Insta MOBILE STYLES ========================== */
+
+/* =============================  Insta TABLET STYLES========================== */
+@media screen and (min-width: 768px) {
+    .insta-section-desktop-img,
+    .insta-section-mobile-img {
+        display: none;
+    }
+    .insta-section-tablet-img {
+        display: block;
+        width: 100%;
+    }
+    .insta-section {
+        display: flex;
+        flex-direction: row;
+    }
+    .insta-section-left {
+        padding: 80px 40px;
+    }
+    .insta-section-title {
+        font-size: 55px;
+    }
+    .insta-section-text {
+        width: 304px;
+        margin-top: 24px;
+
+
+        margin-bottom: 133px;
+    }
+}
+/* =============================  /Insta TABLET STYLES ========================== */
+
+/* =============================  Insta DESKTOP STYLES ========================== */
+@media screen and (min-width: 1158px) { 
+    .insta-section-tablet-img,
+    .insta-section-mobile-img {
+        display: none;
+    }
+    .insta-section-desktop-img {
+        display: block;
+        width: 100%;
+    }
+    .insta-section-left {
+        padding: 120px 72px;
+    }
+    .insta-section-text {
+        width: 576px;
+    }
+}
+/* =============================  /Insta DESKTOP STYLES ========================== */
 
 /* =============================  Section 7 Dribbble ========================== */
+
+/* =============================  Dribbble MOBILE STYLES ========================== */
+.dribble-section-desktop-img,
+.dribble-section-tablet-img {
+    display: none;
+}
+.dribble-section-mobile-img {
+    display: block;
+}
 .dribbble-section {
     background-color: #000000;
-    padding: 120px 182px;
+    padding: 64px 20px;
 }
-
 .dribbble-section-title {
     color: var(--White, #FFF);
-margin: 0;
-    /* Heading - 55px */
     font-family: Sen;
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
     line-height: normal; 
 }
-
 .dribbble-section-text {
     color: var(--Light-Grey, #8491A0);
-    width: 636px;
-    /* Pargraph_18px */
+    width: 320px;
     font-family: Sen;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 27px */
-    margin top: 24px;
+    margin-top: 24px;
     margin-bottom: 40px;
 } 
 .dribbble-section-link {
     color: var(--White, #FFF);
+    font-family: Sen;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
 
-/* Paragraph_16px */
-font-family: Sen;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-text-decoration: none;
-
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #FFF;
 }
 .dribble-img-container {
-    margin-top: 124px;
+    margin-top: 64px;
    display: flex; 
    flex-direction: column;
    justify-content: space-between;
-
-   height: 676px;
-   width: 1076px;
+   height: 516px;
+   width: 320px;
    background: var(--Level-1, #181823);
    border-radius: 8px 8px 0px 0px;
 }
 .dribble-section-icon {
-margin: 12px 16px;
-   
-
+    margin: 12px 16px;
 }
 .dribble-img {
     display: flex;
-align-items: flex-end;
+    align-items: flex-end;
 }
-/* =============================  /Section 7 Dribbble ========================== */
+
+/* =============================  /Dribbble MOBILE STYLES ========================== */
+
+/* =============================  Dribbble TABLET STYLES ========================== */
+@media screen and (min-width: 768px) {
+    .dribble-section-desktop-img,
+    .dribble-section-mobile-img {
+     display: none;
+    }
+    .dribble-section-tablet-img {
+        display: block;
+    }
+    .dribbble-section {
+        padding: 80px 40px;
+    }
+    .dribbble-section-text {
+        width: 688px;
+    }
+    .dribble-img-container {
+        margin-top: 120px;
+        height: 516px;
+        width: 688px;
+    }
+ }
+/* =============================  /Dribbble TABLET STYLES ========================== */
+
+/* =============================  Dribbble DESKTOP STYLES ========================== */
+@media screen and (min-width: 1158px) { 
+    .dribble-section-tablet-img,
+    .dribble-section-mobile-img {
+        display: none;
+    }
+    .dribble-section-desktop-img {
+        display: block;
+    }
+    .dribbble-section {
+        padding: 120px 182px;
+    }
+    .dribbble-section-text {
+        width: 636px;
+    } 
+    .dribble-img-container {
+       height: 676px;
+       width: 1076px;
+    }
+}
+/* =============================  /Dribbble DESKTOP STYLES ========================== */
 
 /* =============================  Section 8 Reviews ========================== */
+
+/* =============================  Reviews MOBILE STYLES ========================== */
+.reviews-section-desktop-img {
+    display: none;
+}
+.reviews-section-tablet-img {
+    display: block;
+}
 .reviews-section {
-    display: flex;
-gap: 24px;
-background-color: #000000;
-padding: 120px 72px;
+    background-color: #000000;
+    padding: 48px 20px;
 }
 .reviews-section-left {
-    display: flex;
-    flex-direction: column;
-    width: 636px;
-    height: 278px;
-    padding-right: 48px;
+    margin-bottom: 64px;
 }
 .reviews-section-title {
     color: var(--White, #FFF);
-    width: 588px;
-    margin: 0;
-    /* Heading - 55px */
+    width: 320px;
     font-family: Sen;
-    font-size: 55px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 .reviews-section-text {
     color: var(--Light-Grey, #8491A0);
-    width: 588px;
-    margin-top: 24px;
+    width: 320px;
+    margin-top: 16px;
     margin-bottom: 40px;
-    /* Paragraph - 18px */
     font-family: Sen;
     font-size: 18px;
     font-style: normal;
@@ -554,37 +998,30 @@ padding: 120px 72px;
 }
 .reviews-section-link {
     color: var(--White, #FFF);
-
-    /* Paragraph_16px */
     font-family: Sen;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
-    text-decoration: none;
-}
-.reviews-section-right {
-display: flex;
-flex-direction: column;
-
+    
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #FFF;
 }
 .reviews-section-list {
-    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 120px;
-    padding: 0;
+    gap: 48px;
 }
-
 .reviews-section-list-item-text-div {
-    padding: 64px;
-    width: 636px;
+    padding: 32px;
+    width: 333px;
     border: 1px solid var(--Dark-Grey, #5B6876);
 }
 .reviews-section-list-item-text {
     color: var(--White, #FFF);
-    width: 508px;
-    /* Heading_24px */
+    width: 269px;
     font-family: Sen;
     font-size: 24px;
     font-style: normal;
@@ -595,52 +1032,99 @@ flex-direction: column;
 }
 .reviews-section-list-item-text-who {
     color: var(--Dark-Grey, #5B6876);
-
-    /* Heading_18px */
     font-family: Sen;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 27px */
-    margin: 0;
 }
-
 .reviews-section-list-item-text-company {
     color: var(--Dark-Grey, #5B6876);
-
-    /* Pargraph_18px */
     font-family: Sen;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 27px */
-    margin: 0;
 }
-/* =============================  /Section 8 Reviews ========================== */
+/* =============================  /Reviews MOBILE STYLES ========================== */
+
+/* =============================  Reviews TABLET STYLES ========================== */
+@media screen and (min-width: 768px) {
+    .reviews-section {
+        display: flex;
+        gap: 10px;
+        padding: 80px 40px;
+    }
+    .reviews-section-left {
+        margin-bottom: 0;
+    }
+    .reviews-section-title {
+        width: 346px;
+        font-size: 55px;
+    }
+    .reviews-section-text {
+        width: 332px;
+        margin-top: 24px;
+    }
+    .reviews-section-list {
+        gap: 64px;
+    }
+}
+/* =============================  /Reviews TABLET STYLES ========================== */
+
+/* =============================  Reviews DESKTOP STYLES ========================== */
+@media screen and (min-width: 1158px) { 
+    .reviews-section-desktop-img {
+        display: block;
+        width: 100%;
+    }
+    .reviews-section-tablet-img {
+        display: none;
+    }
+    .reviews-section {
+        gap: 72px;
+        padding: 120px 72px;
+    }
+    .reviews-section-title {
+        width: 588px;
+    }
+    .reviews-section-text {
+        width: 588px;
+    }
+    .reviews-section-list {
+        gap: 120px;
+    }
+    .reviews-section-list-item-text-div {
+        padding: 64px;
+        width: 636px;
+    }
+    .reviews-section-list-item-text {
+        width: 508px;
+        line-height: normal; 
+    }
+}
+/* =============================  /Reviews DESKTOP STYLES ========================== */
 
 /* =============================  Section 9 PHOTOGRAPHY ========================== */
+
+/* =============================  PHOTOGRAPHY MOBILE STYLES ========================== */
 .photography-section {
     background-color: #000000;
-    margin: 0;
-    padding: 120px 72px;
+    padding: 48px 20px;
 }
 .photography-section-title {
     color: var(--White, #FFF);
-
-    /* Heading - 55px */
     font-family: Sen;
-    font-size: 55px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0;
 }
 .photography-section-text {
     color: var(--Light-Grey, #8491A0);
-    width: 588px;
+    width: 320px;
     margin-top: 24px;
-    margin-bottom: 64px;
-    /* Paragraph - 18px */
+    margin-bottom: 40px;
     font-family: Sen;
     font-size: 18px;
     font-style: normal;
@@ -648,16 +1132,17 @@ flex-direction: column;
     line-height: 150%; /* 27px */
 }
 .photography-section-buttons {
-display: flex;
-gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 .photography-section-btn {
     display: flex;
+    width: 148px;
     padding: 12px 16px;
     align-items: center;
+    justify-content: center;
     color: var(--White, #FFF);
-
-    /* Button_18px */
     font-family: Sen;
     font-size: 18px;
     font-style: normal;
@@ -676,75 +1161,98 @@ gap: 24px;
     background: var(--Purple, #5221E6);  
 }
 .photography-section-images {
-margin-top: 40px;
-display: flex;
-gap: 24px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
-/* =============================  /Section 9 PHOTOGRAPHY ========================== */
+/* =============================  /PHOTOGRAPHY MOBILE STYLES ========================== */
+
+/* =============================  PHOTOGRAPHY TABLET STYLES ========================== */
+@media screen and (min-width: 768px) {
+.photography-section {
+    padding: 80px 40px;
+}
+.photography-section-title {
+    font-size: 55px;
+}
+.photography-section-text {
+    width: 689px;
+    margin-bottom: 64px;
+}
+.photography-section-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.photography-section-btn {
+    width: normal;
+}
+}
+/* =============================  /PHOTOGRAPHY TABLET STYLES ========================== */
+
+/* =============================  PHOTOGRAPHY DESKTOP STYLES ========================== */
+@media screen and (min-width: 1158px) { 
+.photography-section {
+    padding: 120px 72px;
+}
+.photography-section-text {
+    width: 588px;
+}
+.photography-section-images {
+    flex-wrap: nowrap;
+}
+}
+/* =============================  /PHOTOGRAPHY DESKTOP STYLES ========================== */
 
 /* =============================  Section 10 LGStarted ========================== */
+
+/* =============================  LGStarted MOBILE STYLES ========================== */
 .form-section {
-background-color: #000000;
-display: flex;
-padding: 120px 182px;
-width: 1440px;
-
-justify-content: center;
-align-items: flex-start;
-gap: 24px;
-}
-.form-section-left {
-
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    padding: 48px 20px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
 }
 .form-section-title {
     color: var(--White, #FFF);
-margin: 0;
-    /* Heading_55px */
     font-family: Sen;
-    font-size: 55px;
-    font-style: normal;
+    font-size: 32px;
     font-weight: 700;
     line-height: normal;
 }
 .form-section-text {
     color: var(--Light-Grey, #8491A0);
-    margin-top: 24px;
-    width: 526px;
-    /* Pargraph_18px */
+    margin-top: 16px;
+    width: 320px;
     font-family: Sen;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 27px */
 }
-.form-section-right {
-
-}
 .form-section-label {
-        display: block;
-        color: var(--White, #FFF);
-
-/* Paragraph_16px */
-font-family: Sen;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-        
-        margin-bottom: 8px;
-    }
-
+    display: block;
+    color: var(--White, #FFF);
+    font-family: Sen;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    margin-bottom: 8px;
+}
 .form-section-input {
-    width: 526px;
+    min-width: 320px;
     height: 50px;
-    flex-shrink: 0;
     background: var(--Level-1, #181823);
     margin-bottom: 40px;
+    border: none;
 }
 .form-section-comment {
-    width: 526px;
-height: 100px;
-flex-shrink: 0;
+    min-width: 320px;
+    height: 100px;
     background: var(--Level-1, #181823);
     resize: none;
     border: none;
@@ -753,37 +1261,76 @@ flex-shrink: 0;
 }
 .form-section-btn {
     display: block;
-    width: 526px;
+    width: 320px;
     padding: 24px 32px;
     flex-direction: column;
     align-items: center;
     background: var(--Purple, #5221E6);
     border: none;
     color: var(--White, #FFF);
-
-/* Button_18px */
-font-family: Sen;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%; /* 27px */
-text-transform: uppercase;
+    font-family: Sen;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; 
+    text-transform: uppercase;
 }
 
-/* =============================  /Section 10 LGStarted ========================== */
+/* =============================  /LGStarted MOBILE STYLES ========================== */
+
+/* =============================  LGStarted TABLET STYLES ========================== */
+@media screen and (min-width: 768px) {
+    .form-section {
+        flex-direction: row;
+        padding: 80px 40px;
+        gap: 24px;
+        }
+        .form-section-title {
+            font-size: 55px;
+        }
+        .form-section-text {
+            margin-top: 24px;
+            width: 332px;
+        }
+        .form-section-input {
+            width: 332px;
+        }
+        .form-section-comment {
+            width: 332px;
+        }
+        .form-section-btn {
+            width: 332px;
+        }
+}
+/* =============================  /LGStarted TABLET STYLES ========================== */
+
+/* =============================  LGStarted DESKTOP STYLES ========================== */
+@media screen and (min-width: 1158px) { 
+    .form-section {
+        padding: 120px 182px;
+        }
+        .form-section-text {
+            width: 526px;
+        }
+        .form-section-input {
+            width: 526px;
+        }
+        .form-section-comment {
+            width: 526px;
+        }
+        .form-section-btn {
+            width: 526px;
+        }
+}
+/* =============================  /LGStarted DESKTOP STYLES ========================== */
 
 /* =============================  FOOTER ========================== */
+
+/* =============================  FOOTER MOBILE STYLES ========================== */
+
 .footer {
     background-color: var(--Level-1, #181823);
-    padding: 80px 72px;
-    display: flex;
-}
-.footer-left {
-display: flex;
-flex-direction: column;
-}
-.footer-logo-nav {
-
+    padding: 48px 20px;
 }
 .footer-logotype {
     width: 130.716px;
@@ -794,42 +1341,81 @@ flex-direction: column;
 }
 .footer-icons-div {
     display: flex;
-gap: 16px;
-}
-.footer-icon { 
-
-}
-.footer-text {
-    color: var(--Light-Grey, #8491A0);
-margin: 0;
-padding-top: 142px;
-    /* Paragraph_16px */
-    font-family: Sen;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 24px */
+    gap: 16px;
 }
 .footer-right {
-display: flex;
+    display: flex;
 flex-direction: column;
-flex-wrap: wrap;
-width: 196px;
-height: 192px;
-padding-left: 344px;
-
-
+    margin: 48px 0;
 }
 .footer-link {
     color: var(--White, #FFF);
-    width: 196px;
+    width: 154px;
     height: 48px;
-    /* Paragraph_16px */
     font-family: Sen;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
     text-decoration: none;
+    justify-content: center;
 }
-/* =============================  /FOOTER ========================== */
+.footer-text {
+    color: var(--Light-Grey, #8491A0);
+    font-family: Sen;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+/* =============================  /FOOTER MOBILE STYLES ========================== */
+
+/* =============================  FOOTER TABLET STYLES ========================== */
+@media screen and (min-width: 768px) {
+    .footer {
+        padding: 80px 40px;
+    }
+    .both-sides-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-right {
+        margin: 0;
+        flex-wrap: wrap;
+        width: 308px;
+        height: 192px;
+    }
+    .footer-link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .footer-text {
+        margin-top: 46px;
+        width: 329px;
+    }
+}
+/* =============================  /FOOTER TABLET STYLES ========================== */
+
+/* =============================  FOOTER DESKTOP STYLES ========================== */
+@media screen and (min-width: 1158px) { 
+    .footer {
+        padding: 80px 182px 80px 72px;
+    }
+    .footer-right {
+        width: 416px;
+        height: 192px;
+    }
+    .footer-link {
+        width: 220px;
+    }
+    .footer-text {
+        margin-top: 142px;
+        width: 100%;
+    }
+}
+/* =============================  /FOOTER DESKTOP STYLES ========================== */

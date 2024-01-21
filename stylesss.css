@@ -1,0 +1,22 @@
+
+.footer {
+    padding: 80px 72px;
+    display: flex;
+}
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+.footer-right {
+    justify-content: right;
+margin: 0;
+flex-wrap: wrap;
+width: 196px;
+height: 192px;
+padding-left: 344px;
+}
+.footer-link {
+    width: 196px;
+}
+
+/* =============================  /FOOTER ========================== */
