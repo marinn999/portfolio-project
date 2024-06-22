@@ -27,10 +27,15 @@
         </svg>
         <nav class="page-navigation">
             <ul class="page-navigation-list">
-                <li class="page-navigation-list-item">Experience</li>
-                <li class="page-navigation-list-item">Work</li>
-                <li class="page-navigation-list-item">Photography</li>
-                <li class="page-navigation-list-item">Contact</li>
+                <li class="page-navigation-list-item">
+                    <a 
+                    href="#section-experience">Experience</a></li>
+                <li class="page-navigation-list-item">
+                    <a href="#section-work">Work</a></li>
+                <li class="page-navigation-list-item">
+                    <a href="#section-photo">Photography</a></li>
+                <li class="page-navigation-list-item">
+                    <a href="#section-contact">Contact</a></li>
             </ul>
         </nav>
         <button class="header-btn">
@@ -48,7 +53,7 @@
     <!-- ============================= / Header ================================ -->
     <main>
     <!-- ============================== Section 1 ============================== -->
-<section class="hero">
+<section class="hero" id="section-hero">
     
         <img class="hero-mobile-img"
              src="./img/mobile img/Rectangle 37.jpg" 
@@ -74,7 +79,7 @@
 
 <!-- ================== Section 2 WORK EXPERIENCE ====================== -->
 
-<section class="experience-section">
+<section class="experience-section" id="section-experience">
     <h2 class="work-experience">work experience</h2>
     <h3 class="companies-experience">Companies I have worked for in the past</h3>
     <ul class="companies-experience-list">
@@ -236,7 +241,7 @@ id="skillset">
 <!-- ==============================  / Section 5 ICONS ============================== -->
 
 <!-- ==============================  Section 6 PROJECTS ============================== -->
-<section class="projects-section">
+<section class="projects-section" id="section-work">
     <div class="left-projects-section">
         <h2 class="projects-section-title">my projects</h2>
         <p class="projects-section-description">Work that I’ve done for the past 8 years</p>
@@ -352,7 +357,9 @@ id="skillset">
     <div class="insta-section-left">
     <h2 class="insta-section-title">Instagram</h2>
     <p class="insta-section-text">If you area a person who enjoys photography, then I highly recommend that you check out my Instagram. I’m an avid traveller and I capture the best moments that I would love to cherish with the world</p>
-    <a class="insta-section-link">Follow me on IG</a>
+    <a class="insta-section-link"
+    href="https://www.instagram.com"
+    target="_blank">Follow me on IG</a>
 </div>
     <img class="insta-section-desktop-img"
     src="./img/desktop img/8/Rectangle 39.jpg" 
@@ -379,7 +386,9 @@ id="skillset">
 <section class="dribbble-section">
     <h2 class="dribbble-section-title">Dribbble</h2>
     <p class="dribbble-section-text">Each dribbble shot is made with love and care. Do check out my work on Dribbble. Likes and comments are appreciated.</p>
-    <a href="" class="dribbble-section-link">Follow me on Dribbble</a>
+    <a class="dribbble-section-link"
+    href="https://dribbble.com"
+    target="_blank">Follow me on Dribbble</a>
     <div class="dribble-img-container">
     <svg class="dribble-section-icon"
     width="48"
@@ -478,7 +487,7 @@ id="skillset">
 <!-- ==============================  / Section 8 Reviews ============================== -->
 
 <!-- ==============================  Section 9 PHOTOGRAPHY ============================== -->
-<section class="photography-section">
+<section class="photography-section" id="section-photo">
     <h2 class="photography-section-title">Photography</h2>
     <p class="photography-section-text">Here is a collection of my best travel pictures that I took while travelling places all around the world. </p>
     <div class="photography-section-buttons">
@@ -511,7 +520,7 @@ id="skillset">
 <!-- ==============================  / Section 9 PHOTOGRAPHY ============================== -->
 
 <!-- ==============================  Section 10 LGStarted ============================== -->
-<section class="form-section">
+<section class="form-section" id="section-contact">
     <div class="form-section-left">
         <h2 class="form-section-title">Let’s get started</h2>
         <p class="form-section-text">Now that you know a lot about me, let me know if you are interested to work with me.</p>
@@ -577,15 +586,19 @@ required>
     </div>
 <div class="footer-right">
     <a href="" class="footer-link">Home</a>
-    <a href="" class="footer-link">About</a>
-    <a href="" class="footer-link">Work</a>
-    <a href="" class="footer-link">Process</a>
-    <a href="" class="footer-link">Store</a>
-    <a href="" class="footer-link">Blog</a>
-    <a href="" class="footer-link">Reading List</a>
+    <a href="#section-hero" class="footer-link">About</a>
+    <a href="#section-experience" class="footer-link">Work</a>
+    <a href="#section-photo" class="footer-link">Process</a>
+    <a href="" class="footer-link">Creator</a>
+    <!-- LINK TO MY CV -->
+    <a href="https://www.freepik.com" class="footer-link">Resource</a>
+    <a href="README" 
+    class="footer-link"
+    target="_blank">Read me</a>
+    <!-- ADD README FILE -->
 </div>
 </div>
-<p class="footer-text">Not Copyright 2020 • Robin Williams. Webflow cloneable</p>
+<p class="footer-text">Not Copyright 2020 • Layout improved by M.Kompel</p>
 </footer>
 
 <!-- ==============================  / FOOTER ============================== -->
